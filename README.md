@@ -22,7 +22,10 @@ Check out development progress here https://github.com/CodeBrauer/gmod-loadingsc
 
 ## Installation
 
-*coming soon*
+### Garry's Mod
+
+- Find `/garrysmod/cfg/server.cfg`
+- Add line `sv_loadingurl "https://manix84.github.io/gmod-loadingscreen/?steamid=%s&mapname=%m"`
 
 ## Pull requests
 
