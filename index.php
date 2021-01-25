@@ -18,10 +18,10 @@ $pictures = array(1,2,3);
 shuffle($pictures);
 
 if (isset($_GET['mapname']))
-    $map = '<br>You will play the map: '.$_GET['mapname'];
+    $map = "<br>You will play the map: {$_GET['mapname']}";
 
 if (isset($_GET['steamid'])) {
-    $data = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&steamids='.$_GET['steamid'];
+    $data = "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key={$_ENV['STEAM_WEB_API_KEY']}&steamids={$_GET['steamid']}";
     $f = file_get_contents($data);
     $arr = json_decode($f, true);
     if (isset($arr['response']['players'][0]['personaname']))
@@ -55,7 +55,7 @@ if (isset($_GET['steamid'])) {
         <div class="jumbotron" style="margin-top: 50px;">
             <div class="pull-right cycle-slideshow" data-cycle-fx="none">
                 <?php foreach ($pictures as $pic) {
-                    echo '<img src="img/'.$pic.'.jpg" alt="Picture '.$pic.'" class="imgtop img-rounded">';
+                    echo "<img src='img/{$pic}.jpg' alt='Picture {$pic}' class='imgtop img-rounded'>";
                 }?>
             </div>
             <h1 id="title" class="bigEntrance" style="font-size: 50px;">Cheesy Hans Gaming</h1>
