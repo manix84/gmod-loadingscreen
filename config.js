@@ -39,7 +39,7 @@ gmodLS.musicVolume = .1;
  * @type {Array}
  */
 gmodLS.rules = [
-    "Don't spam mic/chat",
+    "Join the Discord Server: https://discord.gg/zVzNTBh",
     "Be friendly",
     "No RDM'ing",
     "No ghosting",
